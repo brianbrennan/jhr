@@ -99,6 +99,14 @@ header{
 		}
 	}
 
+	.logo{
+		background-image:url('img/logo.png');
+		height:100px;
+		width:150px;
+		float:left;
+		background-size:cover;
+	}
+
 	nav{
 		float:right;
 
@@ -117,10 +125,40 @@ header{
 	}
 }
 
+.cta{
+	background-color:$green;
+	text-decoration:none;
+	padding:$tny $sm;
+	font-size:$medFontSize;
+	color:$white;
+}
+
 .hero{
 	height:80vh;
 	background-image:url('img/bg.jpg');
 	background-size:cover;
+
+	.focus-piece{
+		padding-top:25%;
+		text-align:center;
+
+		.cta{
+			padding:$sm $reg;
+			font-size: $lgFontSize;
+			
+			display:inline-block;
+		}
+		
+		h1{
+			font-family:$body;
+			font-size:$medFontSize;
+			font-style:normal;
+			margin-bottom: $reg;
+			span{
+				margin:0 $reg;
+			}
+		}
+	}
 }
 
 .home{
@@ -140,9 +178,30 @@ header{
 		}
 	}
 
+	.what-we-do{
+		background-color: $light-grey;
+		padding:$sm 0;
+
+		h2{
+			@include span(6);
+		}
+
+		.do-list{
+			@include span(6);
+			@include last();
+			ul{
+				li{
+					list-style:disc;
+					width:49%;
+					display:inline-block;
+				}
+			}
+		}
+	}
+
 	.news{
 		padding:$sm 0;
-		background:$light-grey;
+		background:$white;
 
 		h2{
 			font-size: $regFontSize;
@@ -154,14 +213,25 @@ header{
 			border-right:1px solid $grey;
 			text-align:center;
 			margin-top:$sm;
+			padding-right:$sm;
 
 			h4{
 				font-family: $body;
-				font-style:no-style;
+				font-style:normal;
+				font-weight:700;
+				font-size:$medFontSize;
+				color:$grey;
+				@include transition(0.2s);
+
+				&:hover{
+					color:$black;
+				}
 			}
 
 			a{
 				text-decoration: none;
+
+
 			}
 
 			&:nth-child(4n){

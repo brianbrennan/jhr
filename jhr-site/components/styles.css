@@ -69,6 +69,12 @@ header {
     transition: 0.2s; }
     header a:hover {
       color: #3498db; }
+  header .logo {
+    background-image: url('img/logo.png');
+    height: 100px;
+    width: 150px;
+    float: left;
+    background-size: cover; }
   header nav {
     float: right; }
     header nav ul li {
@@ -79,10 +85,31 @@ header {
       padding: 3px 15px;
       color: #FFF; }
 
+.cta {
+  background-color: #2ecc71;
+  text-decoration: none;
+  padding: 8px 15px;
+  font-size: 20px;
+  color: #FFF; }
+
 .hero {
   height: 80vh;
   background-image: url('img/bg.jpg');
   background-size: cover; }
+  .hero .focus-piece {
+    padding-top: 25%;
+    text-align: center; }
+    .hero .focus-piece .cta {
+      padding: 15px 30px;
+      font-size: 36px;
+      display: inline-block; }
+    .hero .focus-piece h1 {
+      font-family: 'Lato', sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      margin-bottom: 30px; }
+      .hero .focus-piece h1 span {
+        margin: 0 30px; }
 
 .home {
   background: #FFF; }
@@ -97,9 +124,26 @@ header {
       .home .quicks .quick:nth-child(3n) {
         float: right;
         margin-right: 0; }
+  .home .what-we-do {
+    background-color: #ecf0f1;
+    padding: 15px 0; }
+    .home .what-we-do h2 {
+      width: 49.1525423729%;
+      float: left;
+      margin-right: 1.6949152542%; }
+    .home .what-we-do .do-list {
+      width: 49.1525423729%;
+      float: left;
+      margin-right: 1.6949152542%;
+      float: right;
+      margin-right: 0; }
+      .home .what-we-do .do-list ul li {
+        list-style: disc;
+        width: 49%;
+        display: inline-block; }
   .home .news {
     padding: 15px 0;
-    background: #ecf0f1; }
+    background: #FFF; }
     .home .news h2 {
       font-size: 16px;
       text-align: center; }
@@ -109,10 +153,19 @@ header {
       margin-right: 1.6949152542%;
       border-right: 1px solid #7f8c8d;
       text-align: center;
-      margin-top: 15px; }
+      margin-top: 15px;
+      padding-right: 15px; }
       .home .news .headline h4 {
         font-family: 'Lato', sans-serif;
-        font-style: no-style; }
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        color: #7f8c8d;
+        -webkit-transition: 0.2s;
+        -moz-transition: 0.2s;
+        transition: 0.2s; }
+        .home .news .headline h4:hover {
+          color: #34495e; }
       .home .news .headline a {
         text-decoration: none; }
       .home .news .headline:nth-child(4n) {
