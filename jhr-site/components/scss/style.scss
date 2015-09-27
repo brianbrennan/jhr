@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6{
 header{
 	color:$black;
 	padding:$sm;
-	position:fixed;
+	position:absolute;
 	width:100%;
 	a{
 		color:inherit;
@@ -120,6 +120,7 @@ header{
 				background-color:$green;
 				padding: $mic $sm;
 				color:$white;
+				border-radius:$mic;
 			}
 		}
 	}
@@ -131,11 +132,13 @@ header{
 	padding:$tny $sm;
 	font-size:$medFontSize;
 	color:$white;
+	border-radius:$mic;
 }
 
 .hero{
 	height:80vh;
 	background-image:url('img/bg.jpg');
+	background-repeat:no-repeat;
 	background-size:cover;
 
 	.focus-piece{
@@ -144,7 +147,7 @@ header{
 
 		.cta{
 			padding:$sm $reg;
-			font-size: $lgFontSize;
+			font-size: 24px;
 			
 			display:inline-block;
 		}
@@ -153,7 +156,9 @@ header{
 			font-family:$body;
 			font-size:$medFontSize;
 			font-style:normal;
-			margin-bottom: $reg;
+			margin:0 auto $reg auto;
+			background-color:rgba(255,255,255,0.4);
+			width:800px;
 			span{
 				margin:0 $reg;
 			}
@@ -165,7 +170,7 @@ header{
 	background:$white;
 
 	.quicks{
-		padding:$sm 0 $reg 0;
+		padding:$reg 0 $reg 0;
 
 		.quick{
 			@include span(4);
@@ -181,14 +186,18 @@ header{
 	.what-we-do{
 		background-color: $light-grey;
 		padding:$sm 0;
+		height:200px;
 
 		h2{
 			@include span(6);
+			vertical-align: middle;
+			margin-top:$med;
 		}
 
 		.do-list{
 			@include span(6);
 			@include last();
+			margin-top: $reg;
 			ul{
 				li{
 					list-style:disc;
@@ -200,7 +209,7 @@ header{
 	}
 
 	.news{
-		padding:$sm 0;
+		padding:$reg 0 $lg 0;
 		background:$white;
 
 		h2{
@@ -218,7 +227,6 @@ header{
 			h4{
 				font-family: $body;
 				font-style:normal;
-				font-weight:700;
 				font-size:$medFontSize;
 				color:$grey;
 				@include transition(0.2s);
@@ -238,6 +246,39 @@ header{
 				@include last();
 				border-right:none;
 			}
+		}
+	}
+
+	.contact-home{
+		background:$light-grey;
+		padding:$reg 0;
+
+		h3{
+			text-align: center;
+			margin-bottom:$sm;
+		}
+
+		form{
+			width:600px;
+			margin:auto;
+		}
+
+		input, textarea{
+			padding:$tny;
+			width:100%;
+			margin-bottom:$sm;
+			font-family: $body;
+			resize: none;
+		}
+
+		input[type="submit"]{
+			border:none;
+			border-radius:$mic;
+			background-color:$blue;
+			color:$white;
+			width:200px;
+			margin:0 auto $sm auto;
+			display:block;
 		}
 	}
 }
