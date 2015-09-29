@@ -151,6 +151,11 @@ header{
 			
 			display:inline-block;
 		}
+
+		.num{
+			font-family: $headline;
+			font-style:italic;
+		}
 		
 		h1{
 			font-family:$body;
@@ -186,18 +191,17 @@ header{
 	.what-we-do{
 		background-color: $light-grey;
 		padding:$sm 0;
-		height:200px;
-
+		height:245px;
 		h2{
 			@include span(6);
 			vertical-align: middle;
-			margin-top:$med;
+			margin-top:$lg;
 		}
 
 		.do-list{
 			@include span(6);
 			@include last();
-			margin-top: $reg;
+			margin-top: $lg;
 			ul{
 				li{
 					list-style:disc;
@@ -279,6 +283,29 @@ header{
 			width:200px;
 			margin:0 auto $sm auto;
 			display:block;
+			cursor:pointer;
 		}
 	}
+}
+
+.page-wrapper{
+	@include container(800px);
+}
+
+.page{
+	padding-top:$xxl;
+
+	h1{
+		text-align: center;
+	}
+
+	p{
+		margin-bottom:$reg;
+	}
+
+}
+
+footer{
+	padding:$reg 0;
+	text-align:center;
 }

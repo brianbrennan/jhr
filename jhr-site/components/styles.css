@@ -106,6 +106,9 @@ header {
       padding: 15px 30px;
       font-size: 24px;
       display: inline-block; }
+    .hero .focus-piece .num {
+      font-family: 'Droid Serif', serif;
+      font-style: italic; }
     .hero .focus-piece h1 {
       font-family: 'Lato', sans-serif;
       font-size: 20px;
@@ -132,20 +135,20 @@ header {
   .home .what-we-do {
     background-color: #ecf0f1;
     padding: 15px 0;
-    height: 200px; }
+    height: 245px; }
     .home .what-we-do h2 {
       width: 49.1525423729%;
       float: left;
       margin-right: 1.6949152542%;
       vertical-align: middle;
-      margin-top: 45px; }
+      margin-top: 60px; }
     .home .what-we-do .do-list {
       width: 49.1525423729%;
       float: left;
       margin-right: 1.6949152542%;
       float: right;
       margin-right: 0;
-      margin-top: 30px; }
+      margin-top: 60px; }
       .home .what-we-do .do-list ul li {
         list-style: disc;
         width: 49%;
@@ -202,4 +205,25 @@ header {
       color: #FFF;
       width: 200px;
       margin: 0 auto 15px auto;
-      display: block; }
+      display: block;
+      cursor: pointer; }
+
+.page-wrapper {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto; }
+  .page-wrapper:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+.page {
+  padding-top: 120px; }
+  .page h1 {
+    text-align: center; }
+  .page p {
+    margin-bottom: 30px; }
+
+footer {
+  padding: 30px 0;
+  text-align: center; }
