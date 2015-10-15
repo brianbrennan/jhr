@@ -7,6 +7,7 @@
 
 //-------------Fonts
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700|Droid+Serif:700italic);
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px);
 
 
 //-------------Susy settings
@@ -43,6 +44,7 @@ $xxlFontSize:	72px;
 $white:			#FFF;
 $black:			#34495e;
 $blue:			#3498db;
+$light-blue:	#e8f2f9;
 $green:			#2ecc71;
 $dark-green:	#41b800;
 $light-grey:	#ecf0f1;
@@ -50,7 +52,7 @@ $grey:			#7f8c8d;
 
 //-------------Fonts
 $body:			'Lato', sans-serif;
-$headline:		'Droid Serif', serif;
+$headline:		'Slabo 27px', serif;
 
 //---------------------------------Mixins
 
@@ -58,7 +60,6 @@ $headline:		'Droid Serif', serif;
 	font-family: $headline;
 	color:$black;
 	font-size: $lgFontSize;
-	font-style:italic;
 }
 
 
@@ -84,10 +85,11 @@ h1, h2, h3, h4, h5, h6{
 }
 
 header{
-	color:$black;
+	color:$white;
 	padding:$sm;
 	position:absolute;
 	width:100%;
+	background-color:$blue;
 	a{
 		color:inherit;
 		text-decoration:none;
@@ -95,7 +97,7 @@ header{
 		@include transition(0.2s);
 
 		&:hover{
-			color:$blue;
+			color:$light-grey;
 		}
 	}
 
@@ -109,11 +111,14 @@ header{
 
 	nav{
 		float:right;
+		width:100%;
 
 		ul{
+			text-align:center;
+			
 			li{
 				display:inline-block;
-				margin:$sm $reg;
+				margin:$tny $reg;
 			}
 
 			.cta-link{
@@ -137,13 +142,21 @@ header{
 
 .hero{
 	height:80vh;
-	background-image:url('img/bg.jpg');
+	background-image:url('img/door-min.png');
 	background-repeat:no-repeat;
 	background-size:cover;
 
 	.focus-piece{
-		padding-top:25%;
+		padding-top:15%;
 		text-align:center;
+
+		.logo{
+			background-image:url('img/logo.png');
+			height:166px;
+			width:250px;
+			margin:auto;
+			background-size:cover;
+		}
 
 		.cta{
 			padding:$sm $reg;
@@ -189,7 +202,7 @@ header{
 	}
 
 	.what-we-do{
-		background-color: $light-grey;
+		background-color: $light-blue;
 		padding:$sm 0;
 		height:245px;
 		h2{
@@ -254,7 +267,7 @@ header{
 	}
 
 	.contact-home{
-		background:$light-grey;
+		background:$light-blue;
 		padding:$reg 0;
 
 		h3{
